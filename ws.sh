@@ -1,4 +1,5 @@
 # catkin workspace and build PX4
+source ~/.bashrc
 cd ~
 mkdir -p ./catkin_ws/src
 cd ./catkin_ws
@@ -15,4 +16,4 @@ ln -s ~/src/Firmware/ px4
 # Create symlink to the simulation package
 ln -s ~/src/Firmware/Tools/sitl_gazebo/ mavlink_sitl_gazebo
 catkin build
-. ~/.bashrc
+source ~/.bashrc
