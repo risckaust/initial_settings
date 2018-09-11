@@ -46,3 +46,12 @@ echo "deb https://dl.bintray.com/resin-io/debian stable etcher" | sudo tee /etc/
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 sudo apt-get update
 sudo apt-get install etcher-electron -y
+
+# Install QGroundControl AppImage to Desktop
+wget -o ~/Desktop/QGroundControl.AppImage https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
+cd ~/Desktop
+chmod +x ./QGroundControl.AppImage
+sudo usermod -a -G dialout $USER
+sudo apt-get remove modemmanager
+
+
