@@ -47,11 +47,3 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 sudo apt-get update
 sudo apt-get install etcher-electron -y
 
-# Install QGroundControl AppImage to Desktop
-cd ~/Desktop
-wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
-chmod +x ./QGroundControl.AppImage
-sudo usermod -a -G dialout $USER
-sudo apt-get remove modemmanager
-
-
